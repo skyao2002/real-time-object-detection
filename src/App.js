@@ -9,11 +9,13 @@ import { drawRect } from "./utilities";
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   // Main function
   const runCoco = async () => {
     const net = await cocossd.load();
     console.log("Handpose model loaded.");
+    setLoading(false);
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
@@ -45,45 +47,85 @@ function App() {
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
-      drawRect(obj, ctx); 
+      drawRect(obj, ctx);
     }
   };
 
-  useEffect(()=>{runCoco()},[]);
+  useEffect(() => {
+    runCoco();
+  }, []);
+
+  // if (loading) {
+  //   return (
+  //     <div className="App">
+  //       <div class="d-flex justify-content-center mt-5">
+  //         <div class="spinner-border" role="status">
+  //           <span class="visually-hidden">Loading...</span>
+  //         </div>
+  //       </div>
+  //       <div
+  //         style={{ textAlign: "center", marginTop: "50px", fontSize: "50px" }}
+  //       >
+  //         The model is currently loading (this may take 10 seconds)
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          muted={true} 
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
+        {loading ? (
+          <>
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div
+              style={{
+                textAlign: "center",
+                marginTop: "50px",
+                fontSize: "50px",
+              }}
+            >
+              The model is currently loading (this may take 10 seconds)
+            </div>{" "}
+          </>
+        ) : (
+          <>
+            <Webcam
+              ref={webcamRef}
+              muted={true}
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                zindex: 9,
+                width: 640,
+                height: 480,
+              }}
+            />
 
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 8,
-            width: 640,
-            height: 480,
-          }}
-        />
+            <canvas
+              ref={canvasRef}
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                zindex: 8,
+                width: 640,
+                height: 480,
+              }}
+            />
+          </>
+        )}
       </header>
     </div>
   );
