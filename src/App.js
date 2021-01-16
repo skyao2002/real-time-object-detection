@@ -72,6 +72,8 @@ function App() {
   //   );
   // }
 
+  // console.log(window.innerWidth);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -105,8 +107,8 @@ function App() {
                 right: 0,
                 textAlign: "center",
                 zindex: 9,
-                width: 640,
-                height: 480,
+                width: `${window.innerWidth < 640 ? "100%" : 640}`,
+                height: `${window.innerWidth < 480 ? "auto" : 480}`,
               }}
             />
 
@@ -120,8 +122,8 @@ function App() {
                 right: 0,
                 textAlign: "center",
                 zindex: 8,
-                width: 640,
-                height: 480,
+                width: `${window.innerWidth < 640 ? "100%" : 640}`,
+                height: `${window.innerWidth < 480 ? "auto" : 480}`,
               }}
             />
           </>
