@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/real-time-object-detection/static/css/main.523f09c5.chunk.css",
-    "main.js": "/real-time-object-detection/static/js/main.50d880ba.chunk.js",
-    "main.js.map": "/real-time-object-detection/static/js/main.50d880ba.chunk.js.map",
+    "main.js": "/real-time-object-detection/static/js/main.6da63bb4.chunk.js",
+    "main.js.map": "/real-time-object-detection/static/js/main.6da63bb4.chunk.js.map",
     "runtime-main.js": "/real-time-object-detection/static/js/runtime-main.5e0ff53e.js",
     "runtime-main.js.map": "/real-time-object-detection/static/js/runtime-main.5e0ff53e.js.map",
     "static/js/2.ba583733.chunk.js": "/real-time-object-detection/static/js/2.ba583733.chunk.js",
     "static/js/2.ba583733.chunk.js.map": "/real-time-object-detection/static/js/2.ba583733.chunk.js.map",
     "index.html": "/real-time-object-detection/index.html",
-    "precache-manifest.22ba1f91b7b87793c016398c1e522253.js": "/real-time-object-detection/precache-manifest.22ba1f91b7b87793c016398c1e522253.js",
+    "precache-manifest.16808ad72b8a55682e24a515ef18e708.js": "/real-time-object-detection/precache-manifest.16808ad72b8a55682e24a515ef18e708.js",
     "service-worker.js": "/real-time-object-detection/service-worker.js",
     "static/css/main.523f09c5.chunk.css.map": "/real-time-object-detection/static/css/main.523f09c5.chunk.css.map",
     "static/js/2.ba583733.chunk.js.LICENSE.txt": "/real-time-object-detection/static/js/2.ba583733.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5e0ff53e.js",
     "static/js/2.ba583733.chunk.js",
     "static/css/main.523f09c5.chunk.css",
-    "static/js/main.50d880ba.chunk.js"
+    "static/js/main.6da63bb4.chunk.js"
   ]
 }

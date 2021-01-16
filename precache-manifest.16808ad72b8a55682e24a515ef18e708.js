@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a652b72f22819265a91fd75af5333711",
+    "revision": "e596cfbcbea2f46de461e4c91c390a93",
     "url": "/real-time-object-detection/index.html"
   },
   {
-    "revision": "c7a7ccab8a7a1577a976",
+    "revision": "f292fb54d6994e04805b",
     "url": "/real-time-object-detection/static/css/main.523f09c5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/real-time-object-detection/static/js/2.ba583733.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c7a7ccab8a7a1577a976",
-    "url": "/real-time-object-detection/static/js/main.50d880ba.chunk.js"
+    "revision": "f292fb54d6994e04805b",
+    "url": "/real-time-object-detection/static/js/main.6da63bb4.chunk.js"
   },
   {
     "revision": "45ad2cf9ff4b6727c7c8",
